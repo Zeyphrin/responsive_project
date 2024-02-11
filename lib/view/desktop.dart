@@ -10,11 +10,13 @@ class DesktopView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xff191C44),
       drawer: MyDrawer(),
       appBar: AppBar(
+        backgroundColor: Color(0xff21255A),
         title: Text('AniLore Desktop View',
           style: TextStyle(
-              fontFamily: 'ProductSansBold'
+              fontFamily: 'ProductSansBold', color: Colors.white
           ),
         ),
       ),
@@ -29,6 +31,7 @@ class DesktopView extends StatelessWidget {
           return CardGrid(
             imagePath: anime[index].imagePath,
             description: anime[index].judul,
+            rating: anime[index].rating,
           );
         },
       ),

@@ -9,24 +9,24 @@ class PhoneView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: MyDrawer(),
-      appBar: AppBar(
-        title: Text('Fruitpedia Mobile View',
-        style: TextStyle(
-            fontFamily: 'LibreCaslonText'
+      backgroundColor: Color(0xff191C44),
+        drawer: MyDrawer(),
+        appBar: AppBar(
+          backgroundColor: Color(0xff21255A),
+          title: Text(
+            'AniLore Mobile View',
+            style: TextStyle(fontFamily: 'ProductSansBold', color: Colors.white),
+          ),
         ),
-        ),
-      ),
-      body:
-      ListView.builder(
-        itemCount: anime.length,
-        itemBuilder: (BuildContext context, int index) {
-          return cardhorizontal(imagePath: anime[index].imagePath, description: anime[index].judul);
-        },
-      )
-
-
-
-    );
+        body: ListView.builder(
+          itemCount: anime.length,
+          itemBuilder: (BuildContext context, int index) {
+            return cardhorizontal(
+              imagePath: anime[index].imagePath,
+              description: anime[index].judul,
+              rating: anime[index].rating,
+            );
+          },
+        ));
   }
 }

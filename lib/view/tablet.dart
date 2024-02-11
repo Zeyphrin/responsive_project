@@ -9,12 +9,15 @@ class TabletView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xff191C44),
         drawer: MyDrawer(),
         appBar: AppBar(
-          title: Text('Fruitpedia Tablet view',
+          backgroundColor: Color(0xff21255A),
+          title: Text('AniLore Tablet view',
             style: TextStyle(
-                fontFamily: 'LibreCaslonText'
+                fontFamily: 'ProductSansBold', color: Colors.white
             ),
+            
           ),
         ),
         body:GridView.builder(
@@ -28,6 +31,7 @@ class TabletView extends StatelessWidget {
             return CardGrid(
               imagePath: anime[index].imagePath,
               description: anime[index].judul,
+              rating: anime[index].rating,
             );
           },
         ),
